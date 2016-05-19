@@ -5,19 +5,9 @@ class Libpng < Formula
   mirror "https://dl.bintray.com/homebrew/mirror/libpng-1.6.21.tar.xz"
   sha256 "6c8f1849eb9264219bf5d703601e5abe92a58651ecae927a03d1a1aa15ee2083"
 
-  bottle do
-    cellar :any
-    sha256 "5eef2e0b08d11bac515455e9f2addcff5ed77419c3fd98844158894b5bf4f794" => :el_capitan
-    sha256 "9a2b6e64ff89535d0d63a0fde6248a05df3397205d0c24ae0175580b723c1385" => :yosemite
-    sha256 "22b421d6d8034884fb0b697001b0965cb19f3b3a32c0c619ead86250e6f2a40d" => :mavericks
-  end
-
-  head do
-    url "https://github.com/glennrp/libpng.git"
-
-    depends_on "autoconf" => :build
-    depends_on "automake" => :build
-    depends_on "libtool" => :build
+  patch :p0 do
+    url "https://hg.mozilla.org/mozilla-central/raw-file/be199e2f9e39/media/libpng/apng.patch"
+    sha256 "9208ab3e9017cef6cb7b2f069560e6c6496e61d9c415bb05b0ae9314b3675629"
   end
 
   keg_only :provided_pre_mountain_lion
