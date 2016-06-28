@@ -1,13 +1,13 @@
 class Libpng < Formula
   desc "Library for manipulating PNG images"
   homepage "http://www.libpng.org/pub/png/libpng.html"
-  url "ftp://ftp.simplesystems.org/pub/libpng/png/src/libpng16/libpng-1.6.21.tar.xz"
-  mirror "https://dl.bintray.com/homebrew/mirror/libpng-1.6.21.tar.xz"
-  sha256 "6c8f1849eb9264219bf5d703601e5abe92a58651ecae927a03d1a1aa15ee2083"
+  url "ftp://ftp.simplesystems.org/pub/libpng/png/src/libpng16/libpng-1.6.23.tar.xz"
+  mirror "https://dl.bintray.com/homebrew/mirror/libpng-1.6.23.tar.xz"
+  sha256 "6d921e7bdaec56e9f6594463ec1fe1981c3cd2d5fc925d3781e219b5349262f1"
 
   patch :p0 do
-    url "https://hg.mozilla.org/mozilla-central/raw-file/be199e2f9e39/media/libpng/apng.patch"
-    sha256 "9208ab3e9017cef6cb7b2f069560e6c6496e61d9c415bb05b0ae9314b3675629"
+    url "https://hg.mozilla.org/mozilla-central/raw-file/7f9d9dfa09d2/media/libpng/apng.patch"
+    sha256 "d30f47ef71789192da2f5a549b54c938673cec8e575380f27350f0eda24fd43a"
   end
 
   keg_only :provided_pre_mountain_lion
@@ -27,6 +27,7 @@ class Libpng < Formula
   test do
     (testpath/"test.c").write <<-EOS.undent
       #include <png.h>
+
       int main()
       {
         png_structp png_ptr;
