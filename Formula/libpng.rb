@@ -1,13 +1,13 @@
 class Libpng < Formula
   desc "Library for manipulating PNG images"
   homepage "http://www.libpng.org/pub/png/libpng.html"
-  url "ftp://ftp.simplesystems.org/pub/libpng/png/src/libpng16/libpng-1.6.23.tar.xz"
-  mirror "https://dl.bintray.com/homebrew/mirror/libpng-1.6.23.tar.xz"
-  sha256 "6d921e7bdaec56e9f6594463ec1fe1981c3cd2d5fc925d3781e219b5349262f1"
+  url "ftp://ftp.simplesystems.org/pub/libpng/png/src/libpng16/libpng-1.6.24.tar.xz"
+  mirror "https://dl.bintray.com/homebrew/mirror/libpng-1.6.24.tar.xz"
+  sha256 "7932dc9e5e45d55ece9d204e90196bbb5f2c82741ccb0f7e10d07d364a6fd6dd"
 
   patch :p0 do
-    url "https://hg.mozilla.org/mozilla-central/raw-file/7f9d9dfa09d2/media/libpng/apng.patch"
-    sha256 "d30f47ef71789192da2f5a549b54c938673cec8e575380f27350f0eda24fd43a"
+    url "https://hg.mozilla.org/mozilla-central/raw-file/8fd07f16556c/media/libpng/apng.patch"
+    sha256 "d54c919869b5120c6acd873d603b69788e16da7f112cb88b30c28e1724eab4fc"
   end
 
   keg_only :provided_pre_mountain_lion
