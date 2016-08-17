@@ -3,7 +3,6 @@
 # ac_add_options --with-ccache=/usr/local/bin/ccache
 # With MOZ_FOLD_LIBS, all three of nspr/nss/sqlite must come from the same source, either brew or in-tree
 ac_add_options --with-system-nspr
-ac_add_options --with-nspr-prefix=/usr/local/opt/nspr
 ac_add_options --with-system-libevent
 ac_add_options --with-system-nss
 ac_add_options --with-nss-prefix=/usr/local/opt/nss
@@ -32,4 +31,4 @@ mk_add_options AUTOCLOBBER=1
 # "-fcolor-diagnostics" only necessary when using ccache
 # export CC="/usr/bin/clang -fcolor-diagnostics"
 # export CXX="/usr/bin/clang++ -fcolor-diagnostics"
-export PKG_CONFIG_PATH="/usr/local/opt/icu4c/lib/pkgconfig:/usr/local/opt/libffi/lib/pkgconfig:/usr/local/opt/nspr/lib/pkgconfig:/usr/local/opt/nss/lib/pkgconfig:/usr/local/opt/sqlite/lib/pkgconfig"
+export PKG_CONFIG_PATH="/usr/local/opt/icu4c/lib/pkgconfig:/usr/local/opt/libffi/lib/pkgconfig:/usr/local/opt/nss/lib/pkgconfig:/usr/local/opt/sqlite/lib/pkgconfig"
